@@ -1,0 +1,10 @@
+
+^
+java:S3655"HCall "soma.isPresent()" or "!soma.isEmpty()" before accessing the value.(¡ Â
+^
+java:S3655"HCall "mult.isPresent()" or "!mult.isEmpty()" before accessing the value.(Ä«¿Ÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¡ Â
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ä«¿Ÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ßìÏ²ÿÿÿÿÿ
+T
+java:S1144"9Remove this unused private "calculaMediaProdutos" method.(ùÌàÿÿÿÿÿ

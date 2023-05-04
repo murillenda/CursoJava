@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Setter
 public class Aluno {
 
-    private String aluno;
+    private String nome;
     private Notas notas;
     private Double media;
 

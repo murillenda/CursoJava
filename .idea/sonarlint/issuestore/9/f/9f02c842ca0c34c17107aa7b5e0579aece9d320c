@@ -1,0 +1,21 @@
+
+V
+java:S1854";Remove this useless assignment to local variable "findAny".(ïæŠìûÿÿÿÿ
+S	java:S106
+"9Replace this use of System.out or System.err by a logger.(Åª½Ëùÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(óå•—
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ˆàÚóøÿÿÿÿ
+G
+java:S1481",Remove this unused "findAny" local variable.(ïæŠìûÿÿÿÿ
+m
+java:S6204)"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¥¥¥Şûÿÿÿÿ
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(ÄÊ¡ºûÿÿÿÿ
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(¿èğ©
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(Ú¾é‡
+W
+java:S34579"AFormat specifiers should be used instead of string concatenation.(àÁ¹•
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(àÁ¹•
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(ØîÄŠ
+\
+java:S3457;"AFormat specifiers should be used instead of string concatenation.(Æ¡›»ûÿÿÿÿ
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(Æ¡›»ûÿÿÿÿ

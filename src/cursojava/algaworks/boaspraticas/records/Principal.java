@@ -6,7 +6,7 @@ public class Principal {
         Horario horario = new Horario(10, 30);
 
         Agendamento agendamentoCabelo = new Agendamento(horario, "Corte de cabelo");
-        agendamentoCabelo.setHorario(new Horario(-3, 2));
+        agendamentoCabelo.setHorario(new Horario(11, 45));
 
         System.out.println(agendamentoCabelo.getHorarioFormatado());
     }

@@ -14,7 +14,7 @@ public class Principal {
         notasAluno.setNumeroObrigatorioDois(notasString.get(1));
 
         var murillo = new Aluno();
-        murillo.setAluno("Murillo");
+        murillo.setNome("Murillo");
         murillo.setNotas(notasAluno);
 
         System.out.println(

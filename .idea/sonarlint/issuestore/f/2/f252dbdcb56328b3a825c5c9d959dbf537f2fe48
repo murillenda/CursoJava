@@ -1,0 +1,22 @@
+
+o
+java:S1104"TMake APROVADO a static final constant or non-public and provide accessors if needed.(«£‘±üÿÿÿÿ
+k
+java:S1104"UMake REPROVADO a static final constant or non-public and provide accessors if needed.(Ááå—
+r
+java:S1104"WMake RECUPERACAO a static final constant or non-public and provide accessors if needed.(ÈÜö¾úÿÿÿÿ
+I
+java:S1444".Make this "public static APROVADO" field final(«£‘±üÿÿÿÿ
+E
+java:S1444"/Make this "public static REPROVADO" field final(Ááå—
+L
+java:S1444"1Make this "public static RECUPERACAO" field final(ÈÜö¾úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(žƒñ¬
+n
+java:S3008"SRename this field "APROVADO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«£‘±üÿÿÿÿ
+j
+java:S3008"TRename this field "REPROVADO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ááå—
+q
+java:S3008"VRename this field "RECUPERACAO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÜö¾úÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ˆ‹¶©

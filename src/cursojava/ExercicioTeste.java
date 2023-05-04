@@ -1,15 +1,15 @@
 package cursojava;
 
-import java.util.Arrays;
-
 public class ExercicioTeste {
     public static void main(String[] args) {
-        metodoExtraido(args);
+        System.out.printf("Hora em millisegundos = %d%n", sumNums(4));
     }
 
-    private static void metodoExtraido(String[] args) {
-        for (int i = 0; i < 20; i++) {
-            System.out.println("args = " + Arrays.toString(args));
+    private static long sumNums(long num) {
+        var soma = 0;
+        for (long l = num; l >= 0; l--) {
+            soma += l;
         }
+        return soma;
     }
 }

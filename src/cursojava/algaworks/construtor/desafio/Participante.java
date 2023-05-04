@@ -13,7 +13,7 @@ public class Participante {
     private int saldoDePontos;
 
     Participante(String nome) {
-        this(nome, 0);
+        this(nome, SALDO_PONTOS_VALOR_INCIAL);
     }
 
     Participante(String nome, int saldoDePontosInicial) {
