@@ -1,15 +1,20 @@
 package cursojava.algaworks.encapsulamento;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class Cartao {
+
     public static final double TARIFA_DEPOSITO = 0.10;
     public static final double VALOR_MINIMO_DEPOSITO = 50;
 
+
     private String titular;
+
+    @Setter(AccessLevel.NONE)
     private double saldo;
 
     public Cartao(String titular) {
@@ -28,6 +33,6 @@ public class Cartao {
             throw new IllegalArgumentException(
                 String.format("Valor de depósito não pode ser menor que %.2f", VALOR_MINIMO_DEPOSITO));
         }
-        saldo += valorDeposito;
+        saldo += valorDeposito - TARIFA_DEPOSITO;
     }
 }
