@@ -10,6 +10,8 @@ import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.nio.file.StandardOpenOption.*;
 
@@ -38,21 +40,22 @@ public final class UnificadorDeArquivos {
     }
 
     private List<Path> filtrarArquivosPeloNome() throws IOException {
-        List<Path> listaArquivosFragmentados;
 
-        try (var stream = Files.list(pastaArquivosFragmentados)) {
-            listaArquivosFragmentados = stream.filter(Files::isRegularFile)
+        try (Stream<Path> arquivosStream = Files.list(pastaArquivosFragmentados)) {
+            List<Path> listaArquivosFragmentos = arquivosStream.filter(Files::isRegularFile)
                 .map(Path::getFileName)
                 .map(Path::toString)
                 .filter(nome -> nome.matches(String.format(".*%s.\\d+", prefixoArquivosFragmentados)))
                 .map(Path::of)
                 .toList();
 
-        } catch (RuntimeException e) {
-            throw new RuntimeException("Erro em execução de filtrar aquivos pelo nome");
-        }
+            if (listaArquivosFragmentos.isEmpty()) {
+                throw new IOException("Não existem fragmentos com prefixo " + prefixoArquivosFragmentados + " na pasta "
+                + pastaArquivosFragmentados.toAbsolutePath());
+            }
 
-        return listaArquivosFragmentados;
+            return listaArquivosFragmentos;
+        }
     }
 
     private List<Path> ordenarArquivos(List<Path> arquivosFragmentadosFiltrados) {
@@ -80,10 +83,12 @@ public final class UnificadorDeArquivos {
 
     private void escreverArquivoFragmento(ByteChannel channelWrite, Path arquivoFragmentado) throws IOException {
         ByteBuffer buffer = ByteBuffer.allocate(UM_KILOBYTE);
-        try (ByteChannel ignored = Files.newByteChannel(arquivoFragmentado, READ)) {
-            buffer.flip();
-            channelWrite.write(buffer);
-            buffer.clear();
+        try (ByteChannel channelRead = Files.newByteChannel(arquivoFragmentado, READ)) {
+            while (channelRead.read(buffer) > 0) {
+                buffer.flip();
+                channelWrite.write(buffer);
+                buffer.clear();
+            }
         }
     }
 
