@@ -1,0 +1,24 @@
+mai. 11, 2023 9:07:40 AM cursojava.algaworks.logs.javaloggingapi.model.Titular <init>
+ADVERTÊNCIA: Nome do titular 'João' muito curto
+mai. 11, 2023 9:07:40 AM cursojava.algaworks.logs.javaloggingapi.Principal main
+GRAVE: Erro administrando conta corrente 100/9999
+java.lang.IllegalArgumentException: Valor do saque deve ser maior que 0
+	at cursojava.algaworks.logs.javaloggingapi.model.ContaCorrente.sacar(ContaCorrente.java:85)
+	at cursojava.algaworks.logs.javaloggingapi.Principal.main(Principal.java:23)
+
+mai. 11, 2023 7:47:35 PM cursojava.algaworks.logs.javaloggingapi.model.Titular <init>
+ADVERTÊNCIA: Nome do titular 'João' muito curto
+mai. 11, 2023 7:47:35 PM cursojava.algaworks.logs.javaloggingapi.Principal main
+GRAVE: Erro administrando conta corrente 100/9999
+java.lang.IllegalArgumentException: Valor do saque deve ser maior que 0
+	at cursojava.algaworks.logs.javaloggingapi.model.ContaCorrente.sacar(ContaCorrente.java:85)
+	at cursojava.algaworks.logs.javaloggingapi.Principal.main(Principal.java:23)
+
+mai. 11, 2023 8:03:45 PM cursojava.algaworks.logs.slf4jcomjavaloggingapi.model.Titular <init>
+ADVERTÊNCIA: Nome do titular 'João' muito curto
+mai. 11, 2023 8:03:45 PM cursojava.algaworks.logs.slf4jcomjavaloggingapi.Principal main
+GRAVE: Erro administrando conta corrente 100/9999
+java.lang.IllegalArgumentException: Valor do saque deve ser maior que 0
+	at cursojava.algaworks.logs.slf4jcomjavaloggingapi.model.ContaCorrente.sacar(ContaCorrente.java:55)
+	at cursojava.algaworks.logs.slf4jcomjavaloggingapi.Principal.main(Principal.java:23)
+
