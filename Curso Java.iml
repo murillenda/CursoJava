@@ -20,7 +20,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="slf4j-api-2.0.7" level="project" />
-    <orderEntry type="library" name="slf4j-jdk14-2.0.7" level="project" />
+    <orderEntry type="library" name="ch.qos.logback.classic" level="project" />
   </component>
 </module>
