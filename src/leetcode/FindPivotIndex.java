@@ -7,14 +7,17 @@ public class FindPivotIndex {
     }
 
     public static int pivotIndex(int[] nums) {
-        var total = 0;
-        var leftSum = 0;
-        for (int num : nums) {
-            total = total - num;
-            if (leftSum == total) return num;
-            leftSum += num;
-
+        if(nums.length == 0) return - 1;
+        int leftSum = 0;
+        int rightSum = 0;
+        for(int num : nums) {
+            rightSum += num;
         }
-        return -1;
+        for(int i = 0; i < nums.length; i ++) {
+            rightSum -= nums[i];
+            if(rightSum == leftSum) return i;
+            leftSum += nums[i];
+        }
+        return - 1;
     }
 }
