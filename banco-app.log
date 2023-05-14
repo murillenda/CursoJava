@@ -22,3 +22,11 @@ java.lang.IllegalArgumentException: Valor do saque deve ser maior que 0
 	at cursojava.algaworks.logs.slf4jcomjavaloggingapi.model.ContaCorrente.sacar(ContaCorrente.java:55)
 	at cursojava.algaworks.logs.slf4jcomjavaloggingapi.Principal.main(Principal.java:23)
 
+mai. 12, 2023 1:35:27 PM cursojava.algaworks.logs.javaloggingapi.model.Titular <init>
+ADVERTÊNCIA: Nome do titular 'João' muito curto
+mai. 12, 2023 1:35:27 PM cursojava.algaworks.logs.javaloggingapi.Principal main
+GRAVE: Erro administrando conta corrente 100/9999
+java.lang.IllegalArgumentException: Valor do saque deve ser maior que 0
+	at cursojava.algaworks.logs.javaloggingapi.model.ContaCorrente.sacar(ContaCorrente.java:85)
+	at cursojava.algaworks.logs.javaloggingapi.Principal.main(Principal.java:23)
+
