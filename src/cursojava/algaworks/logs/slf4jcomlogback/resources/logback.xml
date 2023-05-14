@@ -1,0 +1,42 @@
+<configuration>
+    <!-- Appender é um componente responsável pelos registros de mensagens de log em um destino, esse destino
+    /// pode ser o console que é a saída padrão, um arquivo, um banco de dados, uma conexão de rede e etc.
+    /// appender envia o registro de log para esses destinos -->
+    <appender name="saidaPadrao" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder é onde formatamos a saída do log
+        ele é responsável por transformar um registro de log para uma string formatada
+        Ao adicionar o encoder, automaticamente estaremos usando a classe PatternLayoutEncode -->
+        <encoder>
+            <!-- Aqui aplicamos o padrão de layout, ele é escrito usando algo chamado de Conversion Word,
+            são como se fossem placeholders, %date por exemplo é um conversion word -->
+            <!-- %date -> date, %-NUMERO_CARACTERESlevel -> level, %logger{tamanho} -> nome da classe que instanciamos o logger %msg -> mensagem -->
+            <!-- corzinha (%highlight(%-5level) -->
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan(%logger{15}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender responsável por registrar mensagens de logs em arquivos -->
+    <appender name="arquivo" class="ch.qos.logback.core.FileAppender">
+        <file>banco-app.log</file>
+        <!-- esse append a gente passa true ou false caso esse arquivo já existir se queremos zerar e começar um novo ou apenas adicionar novas informações
+        onde true você continua adicionando e não perde o histórico, e false vai por cima. -->
+        <append>true</append>
+        <encoder>
+            <!-- Aqui não podemos deixar as config de cor, pois escrevemos em um arquivo TXT, então não virá cores, mas sim coisas estranhas -->
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{15} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Tudo aqui dentro vai impactar dentro do model desse package apenas -->
+    <logger name="src.cursojava.algaworks.logs.slf4jcomlogback.model" level="TRACE" />
+
+    <!-- Configurar um Logger raiz root
+     o level INFO significa que debug e trace não são passados para o appender e irão ser ignorados -->
+    <!-- todos os logs do nosso programa irão usar os dois appenders -->
+    <root level="INFO">
+        <appender-ref ref="saidaPadrao"/>
+        <appender-ref ref="arquivo"/>
+    </root>
+
+
+</configuration>
